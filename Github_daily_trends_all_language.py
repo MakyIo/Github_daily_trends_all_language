@@ -9,7 +9,7 @@ def get_trading_repositories():
     lista = read_csv(PATH_TO_DATA).url.tolist()
     for url in lista:
         url_to_call = url
-        print("Linguage " + str(url_to_call[28:-12])+ "\n")
+        print("Language " + str(url_to_call[28:-12])+ "\n")
         response = requests.get(url_to_call, headers={'User-Agent': "Mozilla/5.0"})
         response_code = response.status_code
         if response_code != 200:
@@ -41,7 +41,7 @@ def get_trading_repositories():
 
 
 if __name__ == "__main__":
-    print("Scrapy daily trends 4 all lenguage .. ")
+    print("Scrapy daily trends 4 all language .. ")
     trending_repos = get_trading_repositories()
     #pprint.pprint(trending_repos)
 
